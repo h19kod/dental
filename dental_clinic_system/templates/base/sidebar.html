@@ -1,0 +1,34 @@
+<!-- Sidebar Navigation -->
+<nav class="sidebar d-none d-md-block shadow">
+    <div class="sidebar-brand">
+        <i class="bi bi-heart-pulse-fill"></i>
+        DENTAL PRO
+    </div>
+    
+    <div class="nav flex-column gap-2">
+        <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="{% url 'dashboard' %}">
+            <i class="bi bi-grid-1x2"></i>
+            لوحة التحكم
+        </a>
+        
+        <a class="nav-link" href="/admin/">
+            <i class="bi bi-person-gear"></i>
+            الإدارة
+        </a>
+        
+        <hr>
+        
+        <form action="{% url 'logout' %}" method="post">
+            {% csrf_token %}
+            <button type="submit" class="nav-link text-danger border-0 bg-transparent w-100 text-start">
+                <i class="bi bi-box-arrow-right"></i>
+                خروج
+            </button>
+        </form>
+    </div>
+</nav>
+
+<!-- Mobile Menu Toggle Button -->
+<button class="btn btn-cyan d-md-none position-fixed" id="menuToggle" style="top: 1rem; right: 1rem; z-index: 999;">
+    <i class="bi bi-list"></i>
+</button>
