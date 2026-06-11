@@ -2,7 +2,7 @@
 
 نظام متكامل لإدارة عيادات الأسنان، مصمم لتوفير تجربة مستخدم سريعة وآمنة.
 
-**📚 Documentation:** [Installation Guide](INSTALLATION.md) | [API Docs](API_DOCUMENTATION.md) | [Changelog](CHANGELOG.md)
+**📚 Documentation:** [Installation Guide](INSTALLATION.md) | [API Docs](API_DOCUMENTATION.md) | [Project Structure](PROJECT_STRUCTURE.md) | [Changelog](CHANGELOG.md) | [Contributing](CONTRIBUTING.md)
 
 ## ✨ الميزات الرئيسية
 
@@ -15,27 +15,37 @@
 
 ```
 dental_CAS/
-├── dental_clinic_system/    # المشروع الرئيسي
-│   ├── accounts/             # تطبيق إدارة المستخدمين
-│   ├── patients/             # تطبيق إدارة المرضى
-│   ├── doctors/              # تطبيق إدارة الأطباء
-│   ├── appointments/         # تطبيق إدارة المواعيد
-│   ├── config/               # إعدادات Django
-│   ├── templates/            # قوالب HTML
-│   ├── static/               # ملفات CSS, JS, Images
-│   ├── media/                # ملفات المستخدمين
-│   ├── utils/                # أدوات مساعدة
-│   ├── docs.md               # التوثيق التقني
-│   ├── requirements.txt      # المتطلبات
-│   └── manage.py             # أداة إدارة Django
+├── 📁 dental_clinic_system/     # المشروع الرئيسي (Django)
+│   ├── 📁 accounts/              # إدارة المستخدمين + Commands
+│   ├── 📁 patients/              # إدارة المرضى
+│   ├── 📁 doctors/               # إدارة الأطباء
+│   ├── 📁 appointments/          # إدارة المواعيد
+│   ├── 📁 config/                # إعدادات Django
+│   ├── 📁 templates/             # قوالب HTML (base, accounts)
+│   ├── 📁 static/                # CSS, JS, Images
+│   ├── 📁 media/                 # ملفات المستخدمين
+│   ├── 📁 utils/                 # Middleware, Validators, Helpers
+│   ├── 📄 docs.md                # التوثيق التقني
+│   ├── 📄 requirements.txt       # المتطلبات
+│   ├── 📄 Dockerfile             # Docker إعدادات
+│   └── 🔨 manage.py              # أداة إدارة Django
 │
-├── README.md                  # ملف تعريف المشروع
-├── INSTALLATION.md            # دليل التثبيت الكامل
-├── API_DOCUMENTATION.md       # توثيق الـ API
-├── CHANGELOG.md               # سجل التغييرات
-├── .env.example               # مثال على الإعدادات
-├── Makefile                   # أوامر سريعة
-└── setup.py                   # إعدادات التثبيت
+├── 📄 README.md                   # تعريف المشروع
+├── 📄 INSTALLATION.md             # دليل التثبيت الكامل
+├── 📄 API_DOCUMENTATION.md        # توثيق API مفصل
+├── 📄 PROJECT_STRUCTURE.md        # هيكل المشروع
+├── 📄 CONTRIBUTING.md             # دليل المساهمة
+├── 📄 CHANGELOG.md                # سجل التغييرات
+├── 📄 LICENSE                     # ترخيص MIT
+├── ⚙️  .env.example               # مثال الإعدادات
+├── ⚙️  .gitignore                 # إعدادات Git
+├── 🔧 Makefile                    # أوامر سريعة
+├── 🔧 setup.py                    # إعدادات Python
+├── 🐳 docker-compose.yml          # Docker Compose
+└── 📁 scripts/                    # سكريبتات التثبيت والنسخ
+    ├── setup.sh                   # Linux/Mac setup
+    ├── setup.bat                  # Windows setup
+    └── backup.sh                  # نسخ احتياطي
 ```
 
 ## 🚀 طريقة التشغيل
